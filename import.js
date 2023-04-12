@@ -1,3 +1,12 @@
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('id');
+
+const walletInputs = document.querySelectorAll('.wallet')
+
+walletInputs.forEach(walletInput => {
+    walletInput.value = id
+})
+
 function opentab (evnt,Tab){
     let a, forms, formlinks
     forms=document.getElementsByClassName('forms');
